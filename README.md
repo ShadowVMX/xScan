@@ -23,9 +23,8 @@ En caso de que necesitemos hacer Pivoting y la máquina víctima no tenga nmap, 
           
            - NO lleva a cabo updates ni upgrades.
        
-       
-       
-     ![ParrotPentesting-2022-04-27-00-24-17](https://user-images.githubusercontent.com/92258683/165402674-b1c033fd-4bb9-4ae8-b6b6-d627db8c5f9b.png)
+    
+![ParrotPentesting-2022-04-27-00-24-17](https://user-images.githubusercontent.com/92258683/165402721-662cf758-46a9-4339-9ee1-0c3f42ff5c05.png)
 
        
        
