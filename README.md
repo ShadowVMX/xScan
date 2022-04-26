@@ -67,6 +67,7 @@ En caso de que necesitemos hacer Pivoting y la máquina víctima no tenga nmap, 
 
 ![ParrotPentesting-2022-04-27-00-26-15](https://user-images.githubusercontent.com/92258683/165402895-063b6ebf-3d85-4c32-91ad-1afc77acc9b4.png)
 
+![ParrotPentesting-2022-04-27-00-26-53](https://user-images.githubusercontent.com/92258683/165402967-3b3cbf74-77ac-4ceb-8241-5d5815348231.png)
 
 
 
