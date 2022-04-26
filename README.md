@@ -30,6 +30,9 @@ En caso de que necesitemos hacer Pivoting y la máquina víctima no tenga nmap, 
        
        
        
+       
+       
+       
   2.  HowToPass:
           
            - Nos dará TIPs para traspasar la/s herramienta/s entre máquinas (entre víctima y atacante).
@@ -39,6 +42,15 @@ En caso de que necesitemos hacer Pivoting y la máquina víctima no tenga nmap, 
            - Desde el lado víctima tendremos como acceder a los recursos tanto Linux como en Windows.
            
            - En caso de imposibilidad te da acceso al complemento inicial (Solo para Linux) xClip.
+
+
+
+
+![ParrotPentesting-2022-04-27-00-25-30](https://user-images.githubusercontent.com/92258683/165402809-ffd44a2a-223a-4769-9c3f-ea48df83d82c.png)
+
+
+
+
 
   3.  xClip
 
