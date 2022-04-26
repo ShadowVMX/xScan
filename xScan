@@ -1,0 +1,95 @@
+#!/bin/bash
+
+trap finish SIGINT
+
+if [[ -z $1 ]] ; then
+	echo "$(tput setaf 12)_________________________________________"
+	echo "|                                       |"
+	echo "|        Sh4d0wVMX xScan v1.0           |"
+	echo "|                                       |"
+	echo "|   https://github.com/ShadowVMX/       |"
+	echo "|_______________________________________|"
+	echo "$(tput setaf 2) "
+	echo " "
+	echo "[OPTIONS]:"
+	echo " "
+	echo "[-p][PortScan] [-i][IcmpScan]" 
+	echo " "
+	echo " "
+	echo "TIP-1 --> Mejor escanea con ICMP, una vez tengas el rango, tira por TCP para puertos."
+	echo " "
+	echo "TIP-2 --> Usa xScan -i a secas y lee bien."
+	echo " " 
+	echo "TIP-3 --> Usa xScan para /24, no más."
+	echo " "
+	exit
+fi
+
+
+#----------------------------------------------------------------------------------------------------------------
+
+
+finish (){
+	echo "$(tput setaf 6)" 
+	echo "[*]Ctrl_C detected."
+	echo " "
+	sleep 2
+	echo "L34v1ng."
+	echo " "
+	sleep 1
+	exit
+}
+
+
+#----------------------------------------------------------------------------------------------------------------
+
+if [[ $1 == "-i" ]] ; then
+
+	if [[ -z $2 ]] ; then
+		echo " "
+		echo "Introduce --> xScan -i <id.red>"
+		echo " "
+		echo "$(tput setaf 1)[*]IMPORTANTE: Si el id. de red es 172.5.2.0/24 introduce 172.5.2 si el id es 192.168.0.0 introduce 192.168.0"
+		echo "" 
+		exit
+	fi
+icmp=$2
+	echo " "
+	echo "$(tput setaf 2)[*]Sc4nn1ng pr0c3ss f0r --> $icmp.0/24"
+	echo " "
+	for i in $(seq 1 254); do
+		timeout 0.5 ping -c 1 $icmp.$i &> /dev/null && echo "$(tput setaf 12)[*]Host $icmp.$i - Up"
+	done
+	echo "" 
+	echo "[*]Scan Process done."
+	echo " "
+fi
+
+
+#----------------------------------------------------------------------------------------------------------------
+
+
+if [[ $1 == "-p" ]] ; then
+
+        if [[ -z $2 ]] ; then
+                echo " "
+                echo "Introduce --> xScan -p <ip>"
+		echo " "
+                exit
+        fi
+ipx=$2
+        echo " "
+        echo "$(tput setaf 2)[*]Sc4nn1ng f1rst 15000 p0rts f0r --> $ipx"
+        echo " "
+	echo "[!]F4ST SC4N PR0C3SS[!]"
+	echo " "
+	echo ""
+
+        for i in $(seq 1 15000); do
+		timeout 0.1 bash -c "echo '' > /dev/tcp/$ipx/$i" 2> /dev/null && echo "$(tput setaf 12)[*]Port Open --> $i"
+        done
+
+        echo "" 
+        echo "[*]Scan Process done."
+        echo " "
+fi
