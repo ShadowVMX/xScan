@@ -109,4 +109,30 @@ En caso de que necesitemos hacer Pivoting y la máquina víctima no tenga nmap, 
  
            
            
+  ## WINDOWS
+    Estoy desarrollando xScan para windows, de esta forma podremos ejecutarla con la extensión .ps1 tirando de PowerShell.
+    
+    Tengo que verificar ciertos aspectos previos para añadir al HowToPass y xClip para Windows, en cuanto esté disponible, la actualizaré.
+    
+    
+    
+    
+    
+  ## Reportes y/o fallos.
+  
+    Todo lo que pueda fallar, comunicármelo siempre --> juanmacoello94@gmail.com
+    
+    
+
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
            
