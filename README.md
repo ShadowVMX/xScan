@@ -15,7 +15,7 @@ En caso de que necesitemos hacer Pivoting y la máquina víctima no tenga nmap, 
 
   1.  setup.sh:
   
-           - Lo primero de todo ./setup.sh, el se encargará del resto.
+           - Lo primero de todo chmod +x setup.sh, el se encargará del resto.
             
            - Tiene como función instalar tanto xclip como base64 con los coreutils en la máquina anfitrión.
           
