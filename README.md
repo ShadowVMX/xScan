@@ -11,7 +11,7 @@ En caso de que necesitemos hacer Pivoting y la máquina víctima no tenga nmap, 
 
 
 
-##¿Qué trae consigo xScan?
+## ¿Qué trae consigo xScan?
 
   1.  setup.sh:
   
@@ -26,4 +26,43 @@ En caso de que necesitemos hacer Pivoting y la máquina víctima no tenga nmap, 
        
   2.  HowToPass:
           
-          [^] 
+           - Nos dará TIPs para traspasar la/s herramienta/s entre máquinas (entre víctima y atacante).
+           
+           - Podremos ver como lo procesa con python3 o con impacket-smbserver.
+           
+           - Desde el lado víctima tendremos como acceder a los recursos tanto Linux como en Windows.
+           
+           - En caso de imposibilidad te da acceso al complemento inicial (Solo para Linux) xClip.
+
+  3.  xClip
+
+           - Nos dirá que esperemos para que pueda así, procesar el xScan en base64 para su posterior traspaso.
+           
+           - Nos dirá donde situarnos y qué pasos debemos de llevar a cabo para ejecutar xScan en la máquina víctima.
+           
+           - Si sigues todos los pasos no tendrás ningún problema.
+
+
+
+
+  4.  xScan 
+
+           - Tendremos 2 opciones [-i](icmp) o [-p](TCP).
+           
+           - Te proporcionará unos TIPs (Haz muchísimo caso al 2º).
+           
+           - Cuando ejecutes xScan -i, debes de proporcionar el Id.Red para que la herramienta ejecute el resto (Lee bien el paso anterior.)
+           
+           - Cuando ejecutes xScan -p, debes de proporcionar la IP de la máquina que deseas analizar para considerar si tiene o no puertos abiertos.
+           
+           - La opción de análisis de puertos tratará de verificar los 15000 primeros. Está MUY optimizado el escaneo de puertos.
+           
+           - Si quieres reportar simplemente --> xScan (loqueseaquedebaser) > report.txt [No verás output, has de esperar, aunque prefiero verlo].
+           
+           
+           
+           
+           
+           
+           
+           
