@@ -1,0 +1,25 @@
+#!/bin/bash
+
+echo " "
+echo "[*]Wait ... "
+echo " "
+	base64 -w 0 xScan | xclip -sel clip
+
+sleep 2
+echo "Go to your victim machine..."
+echo " "
+sleep 1.5
+echo "[1.]touch xScan"
+echo "" 
+sleep 1.5
+echo "[2.]chmod +x xScan"
+echo " "
+sleep 1.5
+echo "[3.]echo 'ctrl + v or ctrl + shift + v' | base64 -d > xScan"
+echo " " 
+sleep 1.5
+echo "[4.]./xScan"
+echo " "
+sleep 1.5
+echo "[5.]Pr0c3ss c0mpl3t3."
+echo " "
