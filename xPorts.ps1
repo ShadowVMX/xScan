@@ -6,7 +6,7 @@ if ($ip -eq $null )
     echo "Debe usar el argumento -ip"
     echo " "
     Start-Sleep -s 2
-    echo "./xScan -ip 192.168.0.1"
+    echo "./xPorts -ip 192.168.0.1"
     echo " "
     Start-Sleep -s 2
     exit
