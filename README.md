@@ -78,7 +78,7 @@ En caso de que necesitemos hacer Pivoting y la máquina víctima no tenga nmap, 
 
   4.  xScan 
 
-           - Tendremos 2 opciones [-i](icmp) o [-p](TCP).
+           - Tendremos 3 opciones [-i](icmp) / [-p](TCP) / [-a](ARP).
            
            - Te proporcionará unos TIPs (Haz muchísimo caso al 2º).
            
