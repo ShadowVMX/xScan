@@ -13,12 +13,12 @@ if [[ -z $1 ]] ; then
 	echo " "
 	echo "[OPTIONS]:"
 	echo " "
-	echo "[-p][PortScan] [-i][IcmpScan]" 
+	echo "[-p][PortScan] [-i][IcmpScan] [-a][ARPScan]" 
 	echo " "
 	echo " "
 	echo "TIP-1 --> Mejor escanea con ICMP, una vez tengas el rango, tira por TCP para puertos."
 	echo " "
-	echo "TIP-2 --> Usa xScan -i a secas y lee bien."
+	echo "TIP-2 --> Usa xScan -i a secas y lee bien (Usa mismo procedimiento para L2 (ARP)."
 	echo " " 
 	echo "TIP-3 --> Usa xScan para /24, no más."
 	echo " "
@@ -47,7 +47,7 @@ if [[ $1 == "-i" ]] ; then
 
 	if [[ -z $2 ]] ; then
 		echo " "
-		echo "Introduce --> xScan -i <id.red>"
+		echo "Introduce --> xScan -i o xScan -a <id.red>"
 		echo " "
 		echo "$(tput setaf 1)[*]IMPORTANTE: Si el id. de red es 172.5.2.0/24 introduce 172.5.2 si el id es 192.168.0.0 introduce 192.168.0"
 		echo "" 
@@ -63,6 +63,35 @@ icmp=$2
 	echo "" 
 	echo "[*]Scan Process done."
 	echo " "
+fi
+
+#--------------------------------------------------------------------------------------------------------------
+
+if [[ $1 == "-a" ]] ; then
+
+
+ipx=$2
+        echo " "
+        echo "$(tput setaf 2)[*]Sc4nn1ng Wh0l3 N3tW0rK 1n L2 f0r r4ng3--> $ipx"
+        echo " "
+
+	echo "[!]F4ST SC4N PR0C3SS[!]"
+	echo " "
+	echo ""
+
+        for i in $(seq 1 255); do
+
+	        timeout 0.1 arping -c 1 $ipx.$i | grep "index=0"  &> /dev/null && echo "$(tput setaf 12)[*]Host UP --> $ipx.$i"
+
+        done
+
+        echo "" 
+        echo "[*]Scan Process done."
+        echo " "
+
+
+
+
 fi
 
 
